@@ -17,9 +17,7 @@ A modern React application built with Vite, featuring a comprehensive dashboard 
 - **Form Handling**: React Hook Form with Yup validation
 <!-- - **📝 Form Handling**: Robust form management with React Hook Form and Yup validation -->
 - **Payment Integration**: Stripe integration for payment processing
-<!-- - **💳 Payment Integration**: Secure Stripe integration for seamless payment processing -->
-<!-- - **📱 Responsive Design**: Mobile-first approach ensuring great UX across all devices -->
-<!-- - **🔧 Developer Experience**: Hot module replacement, ESLint configuration, and modern tooling -->
+
 
 ## 🛠️ Tech Stack
 
@@ -28,22 +26,7 @@ A modern React application built with Vite, featuring a comprehensive dashboard 
 - **State Management**: Redux Toolkit, Redux Persist
 - **Routing**: React Router DOM
 - **Charts**: ApexCharts, Recharts, Nivo, Lightweight Charts
-- **Forms**: React Hook Form, Yup validation
-- **UI Libraries**: Framer Motion, React Icons
-- **Development**: ESLint, PostCSS, Autoprefixer
 
-## 📦 Installation
-
-1. Clone the repository:
-```bash
-git clone <repository-url>
-cd mazda626
-```
-
-2. Install dependencies:
-```bash
-npm install
-```
 
 3. Set up environment variables:
 ```bash
