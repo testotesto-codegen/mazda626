@@ -2,12 +2,6 @@
 <!-- 🚗 -->
 
 A modern React application built with Vite, featuring a comprehensive dashboard with data visualization capabilities.
-<!-- > A modern React application built with Vite, featuring a comprehensive dashboard with advanced data visualization capabilities and interactive components. -->
-
-<!-- [![React](https://img.shields.io/badge/React-18.2.0-blue.svg)](https://reactjs.org/) -->
-<!-- [![Vite](https://img.shields.io/badge/Vite-4.4.0-646CFF.svg)](https://vitejs.dev/) -->
-<!-- [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.3.3-38B2AC.svg)](https://tailwindcss.com/) -->
-<!-- [![License](https://img.shields.io/badge/License-Private-red.svg)]() -->
 
 ## 🚀 Features
 
