@@ -18,11 +18,7 @@ A modern React application built with Vite, featuring a comprehensive dashboard 
 - **Frontend**: React 18, Vite
 - **Styling**: Tailwind CSS, Flowbite
 - **State Management**: Redux Toolkit, Redux Persist
-- **Routing**: React Router DOM
-- **Charts**: ApexCharts, Recharts, Nivo, Lightweight Charts
-- **Forms**: React Hook Form, Yup validation
-- **UI Libraries**: Framer Motion, React Icons
-- **Development**: ESLint, PostCSS, Autoprefixer
+
 
 ## 📦 Installation
 
