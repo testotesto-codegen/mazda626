@@ -7,7 +7,10 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "echo '🧪 Running test suite...' && echo 'Tests would run here in a real project'",
+    "test:watch": "echo '👀 Watching for changes...'",
+    "debug": "echo '🐛 Debug mode activated'"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.1",

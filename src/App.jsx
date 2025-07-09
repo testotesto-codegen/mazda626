@@ -1,8 +1,23 @@
 import { RouterProvider } from 'react-router-dom';
 import router from './routes';
 
+// TEST: Added console log for debugging
+console.log('🧪 App component loaded in TEST mode');
+
 function App() {
-	return <RouterProvider router={router} />;
+	// TEST: Added development mode indicator
+	const isDevelopment = import.meta.env.DEV;
+	
+	return (
+		<div className={isDevelopment ? 'test-mode' : ''}>
+			{isDevelopment && (
+				<div className="bg-yellow-100 text-yellow-800 p-2 text-center text-sm">
+					🧪 TEST MODE ACTIVE - Development Environment
+				</div>
+			)}
+			<RouterProvider router={router} />
+		</div>
+	);
 }
 
 export default App;

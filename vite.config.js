@@ -5,6 +5,17 @@ import path from 'path'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  // TEST: Added development server configuration
+  server: {
+    port: 5173,
+    host: true,
+    open: true,
+  },
+  // TEST: Added environment variables for testing
+  define: {
+    __TEST_MODE__: JSON.stringify(true),
+    __BUILD_TIME__: JSON.stringify(new Date().toISOString()),
+  },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
