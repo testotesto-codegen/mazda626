@@ -1,17 +1,34 @@
 # Accelno
+<!-- 🚗 -->
 
 A modern React application built with Vite, featuring a comprehensive dashboard with data visualization capabilities.
+<!-- > A modern React application built with Vite, featuring a comprehensive dashboard with advanced data visualization capabilities and interactive components. -->
+
+<!-- [![React](https://img.shields.io/badge/React-18.2.0-blue.svg)](https://reactjs.org/) -->
+<!-- [![Vite](https://img.shields.io/badge/Vite-4.4.0-646CFF.svg)](https://vitejs.dev/) -->
+<!-- [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.3.3-38B2AC.svg)](https://tailwindcss.com/) -->
+<!-- [![License](https://img.shields.io/badge/License-Private-red.svg)]() -->
 
 ## 🚀 Features
 
 - **Modern React Stack**: Built with React 18 and Vite for fast development and optimal performance
+<!-- - **⚡ Modern React Stack**: Built with React 18 and Vite for lightning-fast development and optimal performance -->
 - **State Management**: Redux Toolkit for efficient state management
+<!-- - **🔄 State Management**: Redux Toolkit with persistence for efficient and reliable state management -->
 - **Routing**: React Router DOM for seamless navigation
+<!-- - **🧭 Routing**: React Router DOM for seamless single-page application navigation -->
 - **UI Components**: Flowbite React components with Tailwind CSS styling
+<!-- - **🎨 UI Components**: Beautiful Flowbite React components with Tailwind CSS styling -->
 - **Data Visualization**: Multiple charting libraries including ApexCharts, Recharts, and Nivo
+<!-- - **📊 Data Visualization**: Rich charting capabilities with ApexCharts, Recharts, Nivo, and Lightweight Charts -->
 - **Interactive Elements**: Drag & drop functionality, resizable components, and responsive layouts
+<!-- - **🎯 Interactive Elements**: Advanced drag & drop functionality, resizable components, and fully responsive layouts -->
 - **Form Handling**: React Hook Form with Yup validation
+<!-- - **📝 Form Handling**: Robust form management with React Hook Form and Yup validation -->
 - **Payment Integration**: Stripe integration for payment processing
+<!-- - **💳 Payment Integration**: Secure Stripe integration for seamless payment processing -->
+<!-- - **📱 Responsive Design**: Mobile-first approach ensuring great UX across all devices -->
+<!-- - **🔧 Developer Experience**: Hot module replacement, ESLint configuration, and modern tooling -->
 
 ## 🛠️ Tech Stack
 
@@ -98,4 +115,3 @@ To deploy:
 ## 📄 License
 
 This project is private and proprietary.
-
