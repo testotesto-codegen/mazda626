@@ -4,24 +4,24 @@ Congratulations! You have just opened the README file for the most important, re
 
 ## Table of Contents
 
-1. Introduction
-2. Installation
-3. Usage
-4. Advanced Usage
-5. Troubleshooting
-6. Frequently Asked Questions
-7. Unfrequently Asked Questions
-8. Changelog
-9. Credits
-10. The Secret Section
+I. Introduction
+II. Installation
+III. Usage
+IV. Advanced Usage
+V. Troubleshooting
+VI. Frequently Asked Questions
+VII. Unfrequently Asked Questions
+VIII. Changelog
+IX. Credits
+X. The Secret Section
 
 ---
 
-## 1. Introduction
+## I. Introduction
 
 This project is designed to do everything you never knew you needed. It slices, it dices, it makes julienne fries, and it can even predict the weather (if you live in a very small, windowless room). Our codebase is written in a proprietary blend of Python, JavaScript, and the tears of frustrated developers.
 
-## 2. Installation
+## II. Installation
 
 To install, simply follow these steps:
 
@@ -31,7 +31,7 @@ To install, simply follow these steps:
 4. Run `install.sh` with administrator privileges, root access, and a note from your mom.
 5. Wait for the installation to finish. This may take anywhere from 3 seconds to the heat death of the universe.
 
-## 3. Usage
+## III. Usage
 
 To use this project, simply think about what you want it to do, and it probably won't do it. For best results, run the following command:
 
@@ -41,11 +41,11 @@ run_the_thing --with-extra-cheese --no-onions
 
 If you see a message that says "Everything is broken," congratulations! You have successfully run the program.
 
-## 4. Advanced Usage
+## IV. Advanced Usage
 
 For advanced users, try editing the `config.yaml` file and changing every value to `42`. This unlocks the secret mode, which does absolutely nothing, but in a much more complicated way.
 
-## 5. Troubleshooting
+## V. Troubleshooting
 
 If you encounter any issues, please try the following steps:
 
@@ -55,7 +55,7 @@ If you encounter any issues, please try the following steps:
 - Ask a question on Stack Overflow and wait for someone to tell you to read the documentation.
 - Give up and go outside.
 
-## 6. Frequently Asked Questions
+## VI. Frequently Asked Questions
 
 **Q: Does this project work on Windows?**
 A: Maybe.
@@ -66,7 +66,7 @@ A: Yes, but it's invisible.
 **Q: Can I contribute?**
 A: Only if you can solve the riddle of the Sphinx.
 
-## 7. Unfrequently Asked Questions
+## VII. Unfrequently Asked Questions
 
 **Q: What is the airspeed velocity of an unladen swallow?**
 A: African or European?
@@ -74,14 +74,14 @@ A: African or European?
 **Q: If a tree falls in the forest and no one is around, does this project still crash?**
 A: Absolutely.
 
-## 8. Changelog
+## VIII. Changelog
 
 - v0.0.1: Initial commit. Nothing works.
 - v0.0.2: Added more bugs.
 - v0.0.3: Fixed a typo in the README.
 - v0.0.4: Broke everything again.
 
-## 9. Credits
+## IX. Credits
 
 Special thanks to:
 
@@ -90,7 +90,7 @@ Special thanks to:
 - The Stack Overflow community
 - That one guy who always says "Have you tried turning it off and on again?"
 
-## 10. The Secret Section
+## X. The Secret Section
 
 If you've read this far, congratulations! You are now part of the secret club. The password is: `password123`.
 
