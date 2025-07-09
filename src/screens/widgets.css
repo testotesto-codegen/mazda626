@@ -1,0 +1,34 @@
+/* CSS to prevent text selection in widgets */
+.no-select {
+  -webkit-user-select: none;  /* Chrome, Safari, Opera */
+  -moz-user-select: none;     /* Firefox */
+  -ms-user-select: none;      /* IE/Edge */
+  user-select: none;          /* Standard */
+}
+
+/* Apply to all widget components */
+.layout .react-grid-item,
+.widget,
+.widget * {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Make sure drag handles are always cursor: move */
+.drag-handle {
+  cursor: move !important;
+}
+
+/* Make sure grid items don't select text during drag */
+.react-grid-item.react-draggable-dragging {
+  cursor: grabbing;
+  z-index: 100;
+}
+
+.react-grid-item.react-grid-placeholder {
+  background-color: transparent;
+  border: 2px dashed #ccc;
+  z-index: 99;
+}

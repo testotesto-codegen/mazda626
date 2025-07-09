@@ -1,0 +1,60 @@
+.testimonials-carousel {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  height: 600px; 
+  overflow: hidden;
+}
+
+.testimonial-item {
+  position: absolute;
+  top: calc(50% - 100px); 
+  left: -100px;
+  opacity: 0;
+  animation: moveAlongBezier 20s linear infinite;
+}
+
+@keyframes moveAlongBezier {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1; /* fade in */
+  }
+  60% {
+    opacity: 1; /* stay visible most of the animation */
+  }
+  100% {
+    transform: translate(calc(100vw - 120px), -300px);
+    opacity: 0; /* fade out */
+  }
+}
+
+.testimonial-item.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+@media screen and (max-width: 1024px) {
+  .testimonials-carousel{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding-bottom: 40px;
+  }
+  
+  .testimonial-item {
+    position: static; 
+    top: auto;
+    left: auto;
+    opacity: 1;
+    animation: none; 
+    
+  }
+}
