@@ -54,17 +54,21 @@ const Home = () => {
 					<span className="text-white">Used</span>
 					<span className="gradient-text">By</span>
 				</motion.div>
-				<motion.div
+				<motion.span
 					initial={{ opacity: 0 }}
 					whileInView={{ opacity: 1 }}
-					transition={{ duration: 2.5 }}
+					transition={{ duration: 2 }}
 					viewport={{ once: true }}
-					className="flex flex-col md:flex-row items-center justify-center gap-36"
+					className="gradient-text"
 				>
-					{clientLogo.map((logo) => (
-						<img key={logo.id} loading="lazy" src={logo.img} alt="logo" className="w-48" />
-					))}
-				</motion.div>
+					<motion.span
+					initial={{ opacity: 0 }}
+					whileInView={{ opacity: 1 }}
+					transition={{ duration: 2 }}
+					viewport={{ once: true }}
+					className="gradient-text"
+				>
+
 			</div>
 			{/* <div className="flex flex-col md:flex-row justify-center items-center gap-20 w-full h-full p-16 mt-24">
 				<motion.div
