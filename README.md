@@ -1,6 +1,8 @@
-# Accelno
+# Accelno - TEST VERSION
 
 A modern React application built with Vite, featuring a comprehensive dashboard with data visualization capabilities.
+
+🧪 **This is a test version with experimental changes for testing purposes.**
 
 ## 🚀 Features
 
@@ -98,4 +100,3 @@ To deploy:
 ## 📄 License
 
 This project is private and proprietary.
-
