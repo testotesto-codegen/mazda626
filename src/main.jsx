@@ -7,17 +7,8 @@ import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 
 import App from './App.jsx';
-import './index.css';
+import './styles/main.css';
 import { store, persistor } from './redux/store.js';
-import { testLog, testConfig } from './utils/testHelpers.js';
-
-// TEST: Expose store and test utilities globally
-window.store = store;
-window.testHelpers = { testLog, testConfig };
-
-// TEST: Log application startup
-testLog('Application starting up...');
-testLog(`Environment: ${import.meta.env.MODE}`);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
 	<React.StrictMode>
