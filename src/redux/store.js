@@ -8,6 +8,8 @@ import widgetsReducer from './slices/widgetSlice';
 import modalReducer from './slices/modalSlice';
 import themeReducer from './slices/themeSlice';
 import stockDetailModalReducer from './slices/stockDetailModalSlice';
+import portfolioReducer from './slices/portfolioSlice';
+import newsReducer from './slices/newsSlice';
 
 import tickerSessionsReducer from './slices/tickerSessionsSlice';
 import lboFilesReducer from './slices/lboFilesSlice';
@@ -22,7 +24,7 @@ const persistLogger = (store) => (next) => (action) => {
 const persistConfig = {
 	key: "root",
 	storage, // Uses localStorage by default
-	whitelist: ["auth", "tickerSessions", "widgets"], // Removed user from persist
+	whitelist: ["auth", "tickerSessions", "widgets", "portfolio"], // Removed user from persist
     debug: true, // Enable debug mode for redux-persist
 };
 
@@ -34,6 +36,8 @@ const rootReducer = combineReducers({
 	modal: modalReducer,
 	theme: themeReducer,
 	stockModal: stockDetailModalReducer,
+	portfolio: portfolioReducer,
+	news: newsReducer,
 	tickerSessions: tickerSessionsReducer,
 	lboFiles: lboFilesReducer,
 });

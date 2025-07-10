@@ -21,6 +21,8 @@ import TenKFiling from './screens/TenKFiling';
 import News from './screens/News';
 import client from './client/Client';
 import LBOUserInputs from './components/dashboard/Valuation/LBO/LBOUserInputs';
+import PortfolioTracker from './components/dashboard/PortfolioTracker/PortfolioTracker';
+import StockScreener from './components/dashboard/StockScreener/StockScreener';
 
 //const Home = lazy(() => import('./pages/Home'));
 const Login = lazy(() => import('./pages/Login'));
@@ -297,6 +299,22 @@ const router = createBrowserRouter(
 					element={
 						<Suspense fallback={<FallbackSpinner />}>
 							<Portfolio />
+						</Suspense>
+					}
+				/>
+				<Route
+					path="/portfolio-tracker"
+					element={
+						<Suspense fallback={<FallbackSpinner />}>
+							<PortfolioTracker />
+						</Suspense>
+					}
+				/>
+				<Route
+					path="/stock-screener"
+					element={
+						<Suspense fallback={<FallbackSpinner />}>
+							<StockScreener />
 						</Suspense>
 					}
 				/>
