@@ -1,8 +1,18 @@
-# Accelno - TEST VERSION
+# Accelno
 
 A modern React application built with Vite, featuring a comprehensive dashboard with data visualization capabilities.
 
-🧪 **This is a test version with experimental changes for testing purposes.**
+## 🔄 Recent Refactoring (2024)
+
+The application has undergone significant architectural improvements:
+
+- **Modular Routing**: Organized routes into feature-based modules for better maintainability
+- **Centralized Logging**: Replaced scattered console.log statements with structured logging system
+- **Reusable Components**: Created reusable route protection and lazy loading components
+- **Error Handling**: Implemented comprehensive error boundaries and user-friendly error handling
+- **Clean Code**: Removed test code from production files and improved code organization
+
+📖 **See [Architecture Guide](docs/ARCHITECTURE.md) and [Routing Guide](docs/ROUTING_GUIDE.md) for detailed information.**
 
 ## 🚀 Features
 

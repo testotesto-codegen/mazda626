@@ -4,6 +4,7 @@ import { loginSuccess, logoutSuccess } from "../redux/slices/authSlice";
 import { deleteUser } from "../redux/slices/userSlice";
 import { store } from "../redux/store";
 import { selectActiveSession } from "../redux/slices/tickerSessionsSlice";
+import logger from "../utils/logger";
 
 class Client {
   constructor() {
@@ -79,10 +80,7 @@ class Client {
       // Add the active session ticker as the first element
       tickers.unshift(activeSessionTicker);
 
-      console.log(
-        "Client: Reordered tickers array with active session ticker first:",
-        tickers,
-      );
+      logger.debug("Reordered tickers array with active session ticker first", { tickers });
     }
 
     const endpoint = `/comps/generate_comps`;

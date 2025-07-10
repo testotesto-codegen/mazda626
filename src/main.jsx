@@ -9,25 +9,32 @@ import { HTML5Backend } from 'react-dnd-html5-backend';
 import App from './App.jsx';
 import './index.css';
 import { store, persistor } from './redux/store.js';
-import { testLog, testConfig } from './utils/testHelpers.js';
+import ErrorBoundary from './components/common/ErrorBoundary.jsx';
+import logger from './utils/logger.js';
 
-// TEST: Expose store and test utilities globally
-window.store = store;
-window.testHelpers = { testLog, testConfig };
+// Log application startup
+logger.info('Application starting up', {
+	environment: import.meta.env.MODE,
+	isDevelopment: import.meta.env.DEV
+});
 
-// TEST: Log application startup
-testLog('Application starting up...');
-testLog(`Environment: ${import.meta.env.MODE}`);
+// Expose store globally in development for debugging
+if (import.meta.env.DEV) {
+	window.store = store;
+	logger.debug('Store exposed globally for development debugging');
+}
 
 ReactDOM.createRoot(document.getElementById('root')).render(
 	<React.StrictMode>
-		<Provider store={store}>
-			<PersistGate loading={null} persistor={persistor}>
-				<DndProvider backend={HTML5Backend}>
-					<App />
-					<ToastContainer />
-				</DndProvider>
-			</PersistGate>
-		</Provider>
+		<ErrorBoundary>
+			<Provider store={store}>
+				<PersistGate loading={null} persistor={persistor}>
+					<DndProvider backend={HTML5Backend}>
+						<App />
+						<ToastContainer />
+					</DndProvider>
+				</PersistGate>
+			</Provider>
+		</ErrorBoundary>
 	</React.StrictMode>
 );
