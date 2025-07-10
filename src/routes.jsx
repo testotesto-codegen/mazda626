@@ -42,6 +42,11 @@ const Account = lazy(() => import('./screens/Account'));
 const SubscriptionPage = lazy(() => import('./screens/SubscriptionPage'));
 //const Roadmap = lazy(() => import('./pages/Roadmap'));
 
+// New feature pages
+const PortfolioAnalytics = lazy(() => import('./pages/PortfolioAnalytics'));
+const AlertsManager = lazy(() => import('./pages/AlertsManager'));
+const NewsSentiment = lazy(() => import('./pages/NewsSentiment'));
+
 // eslint-disable-next-line react/prop-types
 const PrivateRoute = ({ children }) => {
 	const { isLoggedIn } = useSelector((state) => state.auth);
@@ -337,6 +342,32 @@ const router = createBrowserRouter(
 					element={
 						<Suspense fallback={<FallbackSpinner />}>
 							<Settings />
+						</Suspense>
+					}
+				/>
+				
+				{/* New Feature Routes */}
+				<Route
+					path="/portfolio-analytics"
+					element={
+						<Suspense fallback={<FallbackSpinner />}>
+							<PortfolioAnalytics />
+						</Suspense>
+					}
+				/>
+				<Route
+					path="/alerts"
+					element={
+						<Suspense fallback={<FallbackSpinner />}>
+							<AlertsManager />
+						</Suspense>
+					}
+				/>
+				<Route
+					path="/news-sentiment"
+					element={
+						<Suspense fallback={<FallbackSpinner />}>
+							<NewsSentiment />
 						</Suspense>
 					}
 				/>

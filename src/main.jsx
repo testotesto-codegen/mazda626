@@ -8,6 +8,7 @@ import { HTML5Backend } from 'react-dnd-html5-backend';
 
 import App from './App.jsx';
 import './index.css';
+import './styles/themes.css';
 import { store, persistor } from './redux/store.js';
 import { testLog, testConfig } from './utils/testHelpers.js';
 

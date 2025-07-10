@@ -1,0 +1,158 @@
+/* Theme Variables */
+:root {
+  /* Default Light Theme */
+  --color-primary: #3B82F6;
+  --color-secondary: #6B7280;
+  --color-background: #FFFFFF;
+  --color-surface: #F9FAFB;
+  --color-text: #111827;
+  --color-textSecondary: #6B7280;
+  --color-border: #E5E7EB;
+  --color-success: #10B981;
+  --color-warning: #F59E0B;
+  --color-error: #EF4444;
+  --color-accent: #8B5CF6;
+  
+  /* Font Size */
+  --base-font-size: 16px;
+}
+
+/* High Contrast Mode */
+.high-contrast {
+  --color-text: #000000 !important;
+  --color-background: #FFFFFF !important;
+  --color-border: #000000 !important;
+  --color-textSecondary: #333333 !important;
+}
+
+/* Dark Mode Overrides */
+.dark {
+  --color-primary: #60A5FA;
+  --color-secondary: #9CA3AF;
+  --color-background: #111827;
+  --color-surface: #1F2937;
+  --color-text: #F9FAFB;
+  --color-textSecondary: #D1D5DB;
+  --color-border: #374151;
+  --color-success: #34D399;
+  --color-warning: #FBBF24;
+  --color-error: #F87171;
+  --color-accent: #A78BFA;
+}
+
+/* Theme-aware utility classes */
+.bg-background {
+  background-color: var(--color-background);
+}
+
+.bg-surface {
+  background-color: var(--color-surface);
+}
+
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.bg-secondary {
+  background-color: var(--color-secondary);
+}
+
+.bg-success {
+  background-color: var(--color-success);
+}
+
+.bg-warning {
+  background-color: var(--color-warning);
+}
+
+.bg-error {
+  background-color: var(--color-error);
+}
+
+.bg-accent {
+  background-color: var(--color-accent);
+}
+
+.text-text {
+  color: var(--color-text);
+}
+
+.text-textSecondary {
+  color: var(--color-textSecondary);
+}
+
+.text-primary {
+  color: var(--color-primary);
+}
+
+.text-secondary {
+  color: var(--color-secondary);
+}
+
+.text-success {
+  color: var(--color-success);
+}
+
+.text-warning {
+  color: var(--color-warning);
+}
+
+.text-error {
+  color: var(--color-error);
+}
+
+.text-accent {
+  color: var(--color-accent);
+}
+
+.border-border {
+  border-color: var(--color-border);
+}
+
+.border-primary {
+  border-color: var(--color-primary);
+}
+
+/* Font size utilities */
+body {
+  font-size: var(--base-font-size);
+}
+
+/* Smooth transitions for theme changes */
+* {
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Custom scrollbar for dark theme */
+.dark ::-webkit-scrollbar {
+  width: 8px;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: var(--color-surface);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: var(--color-textSecondary);
+}
+
+/* Focus styles */
+.focus\:ring-primary:focus {
+  --tw-ring-color: var(--color-primary);
+}
+
+/* Animation for theme transitions */
+@keyframes theme-transition {
+  0% { opacity: 0.8; }
+  100% { opacity: 1; }
+}
+
+.theme-transition {
+  animation: theme-transition 0.3s ease-in-out;
+}
+
