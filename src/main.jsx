@@ -18,6 +18,17 @@ logger.info('Application starting up', {
 	isDevelopment: import.meta.env.DEV
 });
 
+// Print environment variables in staging/local environments
+if (import.meta.env.DEV || import.meta.env.MODE === 'staging') {
+	console.debug('Environment Variables:', {
+		MODE: import.meta.env.MODE,
+		DEV: import.meta.env.DEV,
+		PROD: import.meta.env.PROD,
+		BASE_URL: import.meta.env.BASE_URL,
+		VITE_API_URL: import.meta.env.VITE_API_URL
+	});
+}
+
 // Expose store globally in development for debugging
 if (import.meta.env.DEV) {
 	window.store = store;

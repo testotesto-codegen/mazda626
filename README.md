@@ -1,8 +1,8 @@
-# Accelno
+# Accelno - TEST VERSION
 
 A modern React application built with Vite, featuring a comprehensive dashboard with data visualization capabilities.
 
-## 🔄 Recent Refactoring (2024)
+🧪 **This is a test version with experimental changes for testing purposes.**
 
 The application has undergone significant architectural improvements:
 

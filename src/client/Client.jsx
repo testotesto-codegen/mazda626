@@ -80,7 +80,7 @@ class Client {
       // Add the active session ticker as the first element
       tickers.unshift(activeSessionTicker);
 
-      logger.debug("Reordered tickers array with active session ticker first", { tickers });
+      console.debug("Client: Reordered tickers array with active session ticker first:", tickers);
     }
 
     const endpoint = `/comps/generate_comps`;

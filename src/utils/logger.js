@@ -112,6 +112,7 @@ class Logger {
    * Log user interactions
    */
   user(action, details = {}) {
+    console.log(`User Action: ${action}`, details);
     this.info(`User Action: ${action}`, details);
   }
 
@@ -148,4 +149,3 @@ export default logger;
 
 // Named exports for convenience
 export const { debug, info, warn, error, api, user, performance, subscription } = logger;
-
