@@ -23,6 +23,7 @@ const NewsCard = ({ news }) => {
   };
 
   const getSentimentColor = (sentiment) => {
+    console.debug('Getting sentiment color for:', sentiment);
     switch (sentiment) {
       case 'positive':
         return 'text-success';
@@ -193,4 +194,3 @@ const NewsCard = ({ news }) => {
 };
 
 export default NewsCard;
-

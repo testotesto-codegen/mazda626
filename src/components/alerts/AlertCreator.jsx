@@ -47,8 +47,8 @@ const AlertCreator = ({ alert, onSave, onCancel }) => {
   ];
 
   const priceConditions = [
-    { value: 'above', label: 'Above' },
-    { value: 'below', label: 'Below' }
+    { value: 'above', label: 'Up' },
+    { value: 'below', label: 'Down' }
   ];
 
   const volumeConditions = [

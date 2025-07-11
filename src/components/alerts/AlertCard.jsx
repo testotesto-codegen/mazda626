@@ -51,7 +51,7 @@ const AlertCard = ({ alert, onEdit, onDelete, onToggle }) => {
       case 'price':
         return `${alert.condition} $${alert.value}`;
       case 'volume':
-        return `${alert.condition} ${(alert.value / 1000000).toFixed(1)}M`;
+        return `${alert.condition} ${(alert.value / 100).toFixed(1)}M`;
       case 'news':
         return `${alert.value} sentiment`;
       case 'earnings':
@@ -198,4 +198,3 @@ const AlertCard = ({ alert, onEdit, onDelete, onToggle }) => {
 };
 
 export default AlertCard;
-

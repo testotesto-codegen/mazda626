@@ -152,7 +152,7 @@ const SentimentAnalyzer = ({ newsData }) => {
       <div className="bg-surface border border-border rounded-lg p-6">
         <h3 className="text-lg font-semibold text-text mb-4 flex items-center gap-2">
           <FiTrendingUp className="w-5 h-5" />
-          24h Trend
+          24 Hour Trend
         </h3>
         
         <div className="h-40">
@@ -233,4 +233,3 @@ const SentimentAnalyzer = ({ newsData }) => {
 };
 
 export default SentimentAnalyzer;
-
