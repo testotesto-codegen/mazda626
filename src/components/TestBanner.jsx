@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 
 /**
  * TestBanner Component
  * 🧪 A banner component to indicate test mode is active
  */
 const TestBanner = ({ 
-  message = "Test Mode Active", 
-  type = "info",
-  dismissible = true 
+  message, 
+  type,
+  dismissible 
 }) => {
   const [isVisible, setIsVisible] = useState(true);
   const [testStats, setTestStats] = useState({
@@ -96,5 +97,19 @@ const TestBanner = ({
   );
 };
 
-export default TestBanner;
+TestBanner.propTypes = {
+  /** Message to display in the banner */
+  message: PropTypes.string,
+  /** Banner type affecting styling */
+  type: PropTypes.oneOf(['info', 'warning', 'error', 'success']),
+  /** Whether the banner can be dismissed */
+  dismissible: PropTypes.bool
+};
 
+TestBanner.defaultProps = {
+  message: "Test Mode Active",
+  type: "info",
+  dismissible: true
+};
+
+export default TestBanner;
