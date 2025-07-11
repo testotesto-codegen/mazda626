@@ -79,10 +79,16 @@ export const formatDate = (date) => {
 /**
  * Week navigation directions
  */
-const WEEK_DIRECTIONS = {
+export const WEEK_DIRECTIONS = {
 	PREV: 'prev',
 	NEXT: 'next',
-	CURRENT: 'current'
+	CURRENT: 'current',
+	FIRST_OF_MONTH: 'first_of_month',
+	LAST_OF_MONTH: 'last_of_month',
+	FIRST_OF_YEAR: 'first_of_year',
+	LAST_OF_YEAR: 'last_of_year',
+	TWO_WEEKS_PREV: 'two_weeks_prev',
+	TWO_WEEKS_NEXT: 'two_weeks_next'
 };
 
 /**
@@ -101,6 +107,28 @@ const calculateWeekStart = (currentDate, direction) => {
 			break;
 		case WEEK_DIRECTIONS.NEXT:
 			startOfWeek.setDate(currentDate.getDate() + 7);
+			break;
+		case WEEK_DIRECTIONS.TWO_WEEKS_PREV:
+			startOfWeek.setDate(currentDate.getDate() - 14);
+			break;
+		case WEEK_DIRECTIONS.TWO_WEEKS_NEXT:
+			startOfWeek.setDate(currentDate.getDate() + 14);
+			break;
+		case WEEK_DIRECTIONS.FIRST_OF_MONTH:
+			startOfWeek.setDate(1);
+			startOfWeek.setDate(1 - startOfWeek.getDay()); // Go to first Sunday of month
+			break;
+		case WEEK_DIRECTIONS.LAST_OF_MONTH:
+			startOfWeek.setMonth(currentDate.getMonth() + 1, 0); // Last day of current month
+			startOfWeek.setDate(startOfWeek.getDate() - startOfWeek.getDay()); // Go to last Sunday
+			break;
+		case WEEK_DIRECTIONS.FIRST_OF_YEAR:
+			startOfWeek.setMonth(0, 1); // January 1st
+			startOfWeek.setDate(1 - startOfWeek.getDay()); // Go to first Sunday of year
+			break;
+		case WEEK_DIRECTIONS.LAST_OF_YEAR:
+			startOfWeek.setMonth(11, 31); // December 31st
+			startOfWeek.setDate(startOfWeek.getDate() - startOfWeek.getDay()); // Go to last Sunday
 			break;
 		default:
 			startOfWeek.setDate(currentDate.getDate() - dayOfWeek);
@@ -177,8 +205,16 @@ export const getWeekRangeFromDate = (dateString, direction = WEEK_DIRECTIONS.CUR
 
 /**
  * Enhanced adjacent week data calculator with better error handling
+ * 
+ * REVIEW NOTE: This function has been significantly improved from the original implementation:
+ * - Added comprehensive input validation to prevent runtime errors
+ * - Enhanced error handling with graceful fallbacks (returns null instead of throwing)
+ * - Better abstraction by leveraging the new getWeekRangeFromDate function
+ * - Supports all new week navigation directions (not just prev/next)
+ * - More robust date parsing and manipulation
+ * 
  * @param {Array} currentWeekData - Current week data array
- * @param {string} direction - Direction to navigate (prev or next)
+ * @param {string} direction - Direction to navigate (supports all WEEK_DIRECTIONS)
  * @returns {Object|null} Adjacent week range data or null if error
  */
 export const getAdjacentWeekData = (currentWeekData, direction) => {

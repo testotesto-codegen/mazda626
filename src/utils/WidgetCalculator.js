@@ -53,8 +53,8 @@ export const getWidgetDimensions = (widget, gridWidth) => {
     return {
       x: widget.x || GRID_CONFIG.DEFAULT_POSITION.x,
       y: widget.y || GRID_CONFIG.DEFAULT_POSITION.y,
-      w: Math.max(w, 1), // Ensure minimum width
-      h: Math.max(h, 1), // Ensure minimum height
+      w: Math.max(w, 0.5), // Ensure minimum width (allow sub-grid precision)
+      h: Math.max(h, 0.5), // Ensure minimum height (allow sub-grid precision)
       i: widget.id,
     };
   } catch (error) {

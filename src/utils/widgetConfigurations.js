@@ -106,16 +106,16 @@ export class WidgetSizeStrategy {
  */
 export class GridDimensionCalculator {
   /**
-   * Convert pixel dimensions to grid units
+   * Convert pixel dimensions to grid units with float precision
    * @param {number} pixelWidth - Width in pixels
    * @param {number} pixelHeight - Height in pixels
    * @param {number} gridWidth - Total grid width
-   * @returns {Object} Grid dimensions {w, h}
+   * @returns {Object} Grid dimensions {w, h} as floats for precise positioning
    */
   static pixelsToGridUnits(pixelWidth, pixelHeight, gridWidth) {
     const columnWidth = gridWidth / GRID_CONFIG.COLUMNS;
-    const w = Math.round(pixelWidth / columnWidth);
-    const h = Math.round(pixelHeight / GRID_CONFIG.ROW_HEIGHT);
+    const w = pixelWidth / columnWidth; // Keep as float for precision
+    const h = pixelHeight / GRID_CONFIG.ROW_HEIGHT; // Keep as float for precision
     
     return { w, h };
   }
@@ -135,4 +135,3 @@ export class GridDimensionCalculator {
     return { width, height };
   }
 }
-
