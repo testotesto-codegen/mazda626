@@ -14,7 +14,7 @@ function App() {
 			<div className={isDevelopment ? 'test-mode' : ''}>
 				{isDevelopment && (
 					<div className="bg-yellow-100 text-yellow-800 p-2 text-center text-sm">
-						🧪 TEST MODE ACTIVE - Development Environment
+						🚀 Development Mode - Live Preview Active
 					</div>
 				)}
 				<RouterProvider router={router} />

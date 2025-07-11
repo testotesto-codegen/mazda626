@@ -106,6 +106,7 @@ const AlertCreator = ({ alert, onSave, onCancel }) => {
     e.preventDefault();
     
     if (!validateForm()) {
+      console.log('Form validation failed:', errors);
       return;
     }
 
@@ -355,4 +356,3 @@ const AlertCreator = ({ alert, onSave, onCancel }) => {
 };
 
 export default AlertCreator;
-
