@@ -22,7 +22,7 @@ import News from './screens/News';
 import client from './client/Client';
 import LBOUserInputs from './components/dashboard/Valuation/LBO/LBOUserInputs';
 
-//const Home = lazy(() => import('./pages/Home'));
+// Lazy-loaded components for better performance
 const Login = lazy(() => import('./pages/Login'));
 const Logout = lazy(() => import('./pages/Logout'));
 const Register = lazy(() => import('./pages/Register'));
@@ -40,7 +40,6 @@ const ContactUs = lazy(() => import('./pages/ContactUs'));
 const VerifyEmail = lazy(() => import('./pages/VerifyEmail'));
 const Account = lazy(() => import('./screens/Account'));
 const SubscriptionPage = lazy(() => import('./screens/SubscriptionPage'));
-//const Roadmap = lazy(() => import('./pages/Roadmap'));
 
 // eslint-disable-next-line react/prop-types
 const PrivateRoute = ({ children }) => {
