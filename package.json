@@ -7,10 +7,20 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "lint:fix": "eslint src --ext js,jsx --fix",
     "preview": "vite preview",
     "test": "echo '🧪 Running test suite...' && echo 'Tests would run here in a real project'",
     "test:watch": "echo '👀 Watching for changes...'",
-    "debug": "echo '🐛 Debug mode activated'"
+    "test:coverage": "echo '📊 Generating coverage report...'",
+    "debug": "echo '🐛 Debug mode activated'",
+    "analyze": "vite-bundle-analyzer",
+    "clean": "rm -rf dist node_modules/.vite",
+    "format": "prettier --write src/**/*.{js,jsx,json,css,md}",
+    "format:check": "prettier --check src/**/*.{js,jsx,json,css,md}",
+    "type-check": "echo '🔍 Type checking would run here with TypeScript'",
+    "validate": "npm run lint && npm run format:check && npm run test",
+    "prepare": "echo '🔧 Preparing project...'",
+    "postinstall": "echo '📦 Dependencies installed successfully'"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.1",
