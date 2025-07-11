@@ -1,20 +1,20 @@
 import { RouterProvider } from 'react-router-dom';
 import router from './routes';
-
-// TEST: Added console log for debugging
-console.log('🧪 App component loaded in TEST mode');
+import DevBanner from './components/common/DevBanner';
+import { isDevelopment, getCurrentConfig } from './config/environment';
 
 function App() {
-	// TEST: Added development mode indicator
-	const isDevelopment = import.meta.env.DEV;
+	const isDevMode = isDevelopment();
+	const config = getCurrentConfig();
+	
+	// Development logging
+	if (config.enableDebugLogs) {
+		console.log('🧪 App component loaded in development mode');
+	}
 	
 	return (
-		<div className={isDevelopment ? 'test-mode' : ''}>
-			{isDevelopment && (
-				<div className="bg-yellow-100 text-yellow-800 p-2 text-center text-sm">
-					🧪 TEST MODE ACTIVE - Development Environment
-				</div>
-			)}
+		<div className={isDevMode ? 'app-development' : 'app-production'}>
+			{config.showDevBanner && <DevBanner />}
 			<RouterProvider router={router} />
 		</div>
 	);
