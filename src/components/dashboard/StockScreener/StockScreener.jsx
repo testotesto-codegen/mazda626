@@ -222,7 +222,7 @@ const StockScreener = () => {
           <div>
             <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Stock Screener</h1>
             <p className="text-gray-600 dark:text-gray-400 mt-2">
-              Find stocks that match your investment criteria
+              ✨ Discover your next winning investment with powerful filtering magic
             </p>
           </div>
           <div className="flex items-center gap-3 mt-4 lg:mt-0">
