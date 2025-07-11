@@ -6,6 +6,7 @@ import { Navigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { Suspense, lazy, useEffect, useState } from 'react';
 import FallbackSpinner from './components/common/FallbackSpinner';
+import { lazyPatterns } from './utils/lazyLoader';
 import ResetPassword from './pages/ResetPassword';
 import TestTwo from './pages/Testtwo';
 import Home from './pages/Home';
@@ -22,25 +23,28 @@ import News from './screens/News';
 import client from './client/Client';
 import LBOUserInputs from './components/dashboard/Valuation/LBO/LBOUserInputs';
 
-//const Home = lazy(() => import('./pages/Home'));
-const Login = lazy(() => import('./pages/Login'));
-const Logout = lazy(() => import('./pages/Logout'));
-const Register = lazy(() => import('./pages/Register'));
-const DashboardHome = lazy(() => import('./screens/DashboardHome'));
-const Watchlist = lazy(() => import('./screens/Watchlist'));
-const TodaysMovers = lazy(() => import('./screens/TodaysMovers'));
-const MarketDashboard = lazy(() => import('./screens/MarketDashboard'));
+// Authentication pages with enhanced error handling
+const Login = lazyPatterns.authPage(() => import('./pages/Login'), 'Login');
+const Logout = lazyPatterns.authPage(() => import('./pages/Logout'), 'Logout');
+const Register = lazyPatterns.authPage(() => import('./pages/Register'), 'Register');
+const ForgotPassword = lazyPatterns.authPage(() => import('./pages/ForgotPassword'), 'Forgot Password');
+const ConfirmEmail = lazyPatterns.authPage(() => import('./pages/ConfirmEmail'), 'Confirm Email');
+const VerifyEmail = lazyPatterns.authPage(() => import('./pages/VerifyEmail'), 'Verify Email');
+
+// Dashboard pages with enhanced error handling
+const DashboardHome = lazyPatterns.dashboardPage(() => import('./screens/DashboardHome'), 'Home');
+const Watchlist = lazyPatterns.dashboardPage(() => import('./screens/Watchlist'), 'Watchlist');
+const TodaysMovers = lazyPatterns.dashboardPage(() => import('./screens/TodaysMovers'), 'Today\'s Movers');
+const MarketDashboard = lazyPatterns.dashboardPage(() => import('./screens/MarketDashboard'), 'Market Dashboard');
+const Settings = lazyPatterns.dashboardPage(() => import('./screens/Settings'), 'Settings');
+const Portfolio = lazyPatterns.dashboardPage(() => import('./screens/Portfolio'), 'Portfolio');
+const Account = lazyPatterns.dashboardPage(() => import('./screens/Account'), 'Account');
+
+// Other pages
 const Checkout = lazy(() => import('./screens/Checkout'));
 const PricingPlan = lazy(() => import('./pages/PricingPlan'));
-const Settings = lazy(() => import('./screens/Settings'));
-const Portfolio = lazy(() => import('./screens/Portfolio'));
-const ForgotPassword = lazy(() => import('./pages/ForgotPassword'));
-const ConfirmEmail = lazy(() => import('./pages/ConfirmEmail'));
 const ContactUs = lazy(() => import('./pages/ContactUs'));
-const VerifyEmail = lazy(() => import('./pages/VerifyEmail'));
-const Account = lazy(() => import('./screens/Account'));
 const SubscriptionPage = lazy(() => import('./screens/SubscriptionPage'));
-//const Roadmap = lazy(() => import('./pages/Roadmap'));
 
 // eslint-disable-next-line react/prop-types
 const PrivateRoute = ({ children }) => {
